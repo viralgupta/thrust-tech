@@ -48,7 +48,7 @@ const SideNav = () => {
         <Link href="/contactus" onClick={openorcloseNav} className="border-b mx-4 sidenav-buttons text-right font-xs text-white">
           CONTACT&nbsp;US
         </Link>
-        <div className="w-full min-h-5 text-center absolute bottom-0">Thrust&nbsp;Tech&nbsp;&copy;&nbsp;{year}</div>
+        <div className="w-full min-h-5 text-center absolute bottom-0 text-gray-500 text-sm">Thrust&nbsp;Tech&nbsp;&copy;&nbsp;{year}</div>
       </div>
     </>
   );

@@ -146,9 +146,9 @@ const page = () => {
             </button>
           </form>
         </div>
-        <div className='hidden md:block text-center'>
+        <div className='hidden md:block text-end'>
           <img src="/img/maps.png" alt='maps' className='rounded-lg opacity-70 hover:opacity-100 duration-500'/>
-          <a href='https://www.google.com/maps/place/Thrust+Tech/@28.6775365,77.3611831,10.32z/data=!4m6!3m5!1s0x390cf18883097b0f:0x14d61ddbe213e804!8m2!3d28.6689899!4d77.4502252!16s%2Fg%2F11ss3clxpg?entry=ttu' target="_blank" rel="noopener" className='block p-2 bg-black text-white w-min rounded-lg h-min align-bottom hover:bg-gray-900 duration-300 border-white border mt-1 ml-auto cursor-pointer'>View&nbsp;In&nbsp;Map</a>
+          <a href='https://www.google.com/maps/place/Thrust+Tech/@28.6775365,77.3611831,10.32z/data=!4m6!3m5!1s0x390cf18883097b0f:0x14d61ddbe213e804!8m2!3d28.6689899!4d77.4502252!16s%2Fg%2F11ss3clxpg?entry=ttu' target="_blank" rel="noopener" className='relative p-2 bg-red-700 text-xs text-white w-min rounded-sm h-min align-bottom hover:bg-gray-900 duration-300  mt-1 ml-auto lowercase cursor-pointer'>View&nbsp;In&nbsp;Maps</a>
         </div>
       </section>
     </>
