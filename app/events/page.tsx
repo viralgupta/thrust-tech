@@ -5,6 +5,9 @@ import getFiles from "../utils/GetFiles";
 import Section from "../utils/SectionInterface";
 const fs = require("fs");
 
+export const dynamic = "force-static"
+export const revalidate = false
+
 const page = () => {
   function getData(dirs: string[], data: any[] = []): Section[] {
     dirs = dirs.reverse();

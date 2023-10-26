@@ -1,6 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
+export const dynamic = "force-static"
+export const revalidate = false
+
 const page = () => {
   return (
     <>

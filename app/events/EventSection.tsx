@@ -1,5 +1,5 @@
-import Carousel from "../products/Carousel";
-import Content from "../products/Content";
+import Carousel from "../../components/Carousel";
+import Content from "../../components/Content";
 
 interface props {
     id: string;

@@ -4,6 +4,9 @@ import getFiles from "./utils/GetFiles";
 import getDirs from "./utils/GetDirs";
 const fs = require("fs");
 
+export const dynamic = "force-static"
+export const revalidate = false
+
 export default function Home() {
   function getData(dirs: string[], data: any[] = []): Section[] {
     dirs = dirs.reverse();

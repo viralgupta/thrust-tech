@@ -1,5 +1,5 @@
-import Carousel from "./Carousel";
-import Content from "./Content"
+import Carousel from "../../components/Carousel";
+import Content from "../../components/Content"
 import Model from "./Model"
 
 interface props {
