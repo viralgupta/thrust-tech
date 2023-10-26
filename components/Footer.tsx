@@ -14,7 +14,7 @@ const Footer = () => {
           <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/thrust-tech-india">LinkedIn</a>
         </li>
         <li>
-          <a target="_blank" rel="noopener" href="">YouTube</a>
+          <a target="_blank" rel="noopener" href="https://www.youtube.com/@ThrustTech">YouTube</a>
         </li>
       </ul>
     </footer>

@@ -11,7 +11,7 @@ const Header = () => {
         <div className="logo">
           <Link href="/#top" scroll={true} className="flex items-center scroll-smooth ">
             <img src="img/tt.png" className="h-20" alt="Thrust Tech Logo" />
-            <span className="text-xl -ml-3">Thrust&nbsp;Tech</span>
+            <span className="text-xl -ml-3">Thrust&nbsp;Tech&nbsp;India</span>
           </Link>
         </div>
         <nav className="desktop-main-menu">
