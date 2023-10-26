@@ -5,7 +5,8 @@ import { useGLTF } from "@react-three/drei";
 
 function Model({ zoomLevel = 1, modelLocation }) {
   const gltf = useGLTF(modelLocation);
-
+  const MaxPolarAngle = window.innerWidth <= 1023 ? 1.5 : 2;
+  const MinPolarAngle = window.innerWidth <= 1023 ? 1.5 : 1;
   return (
     <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen p-2 rounded-lg border">
 
@@ -29,8 +30,8 @@ function Model({ zoomLevel = 1, modelLocation }) {
           minZoom={zoomLevel/2}
           autoRotate
           autoRotateSpeed={1}
-          maxPolarAngle={1.5}
-          minPolarAngle={1.5}
+          maxPolarAngle={MaxPolarAngle}
+          minPolarAngle={MinPolarAngle}
           enableDamping={true}
         />
         <primitive

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <ul>
-        <li>Thrusttech&nbsp;&copy;&nbsp;{year}</li>
+        <li>ThrustTechIndia&nbsp;&copy;&nbsp;{year}</li>
         <li>
           <a target="_blank" rel="noopener" href="https://www.instagram.com/thrusttechindia/">Instagram</a>
         </li>
