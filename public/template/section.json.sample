@@ -1,0 +1,18 @@
+// {
+//     "id": "string",                       // id unique for every section  
+//     "heading": "string",                  // heading that is shown in home page, or event/product page
+//     "content": "string",                  // content that is shown in event/product page
+//     "heading2": "string",                 // second heading below first content that is shown in event/product page can be undefined
+//     "content2": "string",                 // second content below second heading that is shown in event/product page can be undefined
+//     "button": "string",                   // button content that is shown after content in event/product page that redirects to contact us page
+//     "hasModel": "boolean",                // true if the section have a model, used in product section
+//     "modelName": "string",                // model name if the hasModel is true, used in product section, can be undefined
+//     "zoomLevel": "number",                // zoom level of model, can be undefined
+//     "hasPhotos": "boolean",               // need to be true so that section shows in home page and event page, {hasModel to be false and this be true for the section to be shown in product page}
+//     "onHomePage": "boolean",              // should this section be on home page {requires hasPhoto to be true, have a folder name photos in main folder}
+//     "homeRedirectPage": "string",         // page to redirect to from home page button {undefined, "contactus", "aboutus","products", "events"} {products, events requires the section to be on product or event page}
+//     "homeButton": "string",               // text on redirect button on home page section {requires section to be on home page}
+//     "homeType": "string",                 // text on heading on home page, which tells what is the section about (eg: product launch, new event, etc.) can be undefined
+//     "onProductPage": "boolean",           // should the section be on product page, {requires hasModel to be true, and modelName which should match a file with {modelName}.glb in main folder} or {requires hasPhotos to be true, photos folder in the main folder}
+//     "onEventPage": "boolean"              // should the section be on event page, {requires hasPhotos to be true, photos folder in the main folder}
+// }
