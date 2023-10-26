@@ -46,7 +46,7 @@ const page = () => {
     <div className='w-full h-full bg-gray-900'>
         <div className="h-[100px]"></div>
         {getData(getDirs("public/data")).map((section, index) => {
-          return <ProductSection key={index} photoArray={section.photoArray} id={section.id} heading={section.heading} content={section.content} heading2={section.heading2} content2={section.content2} button={section.button} hasModel={section.hasModel} modelLocation={section.modelLocation} zoomLevel={section.zoomLevel} reverse={index % 2 == 0 ? true : false}/>
+          return <ProductSection key={index} hasPhotos={section.hasPhotos} photoArray={section.photoArray} id={section.id} heading={section.heading} content={section.content} heading2={section.heading2} content2={section.content2} button={section.button} hasModel={section.hasModel} modelLocation={section.modelLocation} zoomLevel={section.zoomLevel} reverse={index % 2 == 0 ? true : false}/>
         })}
     </div>
     </>
