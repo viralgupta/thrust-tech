@@ -36,17 +36,50 @@ const page = () => {
     e.preventDefault();
     const validation = formSchema.safeParse(formData);
     if (validation.success) {
-      toast.success("Your Message is delivered", {
-        description: "We will get back to you soon!",
-        duration: 2000,
-      });
-      // Submit form data
-      setFormData({
-        name: "",
-        number: "",
-        email: "",
-        message: "",
-      });
+      toast.loading("Submiting the form...")
+      const formData = new FormData();
+      formData.append('Name', validation.data.name);
+      {validation.data.number && formData.append('Number', validation.data.number)}
+      formData.append('Email', validation.data.email);
+      formData.append('Message', validation.data.message);
+    
+      fetch("https://script.google.com/macros/s/AKfycbwWLoGo0h8g7qkW-X-TUhRzbs373smL5pW6PFv3F83qt1d2L4YTH6YEWHZ_ZQjUrj8B6A/exec", {
+        method: "POST",
+        body: formData,
+      })
+        .then(response => response.json())
+        .then(res => {
+          if (res.result == 'success') {
+            setFormData({
+              name: "",
+              number: "",
+              email: "",
+              message: "",
+            });
+            toast.success("Your Message is delivered", {
+              description: "We will get back to you soon!",
+              duration: 2000,
+            });
+          } else {
+            setFormData({
+              name: "",
+              number: "",
+              email: "",
+              message: "",
+            });
+            toast.error("There was an error submitting the form :(", {
+              description: "Please reach us through our socials!",
+              duration: 5000,
+            });
+          }
+        })
+        .catch(error => {
+          console.error("Error during fetch:", error);
+          toast.error("There was a network error while submitting the form :(", {
+            description: "Please try again later or reach us through our socials!",
+            duration: 5000,
+          });
+        });
     } else {
       let index = 0;
       const displayNextError = () => {
@@ -73,13 +106,14 @@ const page = () => {
           <h2 className="mb-12 text-xl md:text-3xl underline-offset-8 underline font-bold">
             Contact&nbsp;us
           </h2>
-          <form onSubmit={submitForm}>
+          <form onSubmit={e => submitForm(e)}>
             <div className="relative mb-6" data-te-input-wrapper-init>
               <input
                 type="text"
                 className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="exampleInput90"
                 placeholder="Name"
+                name="Name"
                 value={formData.name}
                 onChange={(e) => {
                   setFormData((data) => ({ ...data, name: e.target.value }));
@@ -94,6 +128,7 @@ const page = () => {
                 type="text"
                 className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="exampleInput90"
+                name="Number"
                 placeholder="Phone Number"
                 value={formData.number}
                 onChange={(e) => {
@@ -110,6 +145,7 @@ const page = () => {
                 className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="exampleInput91"
                 placeholder="Email"
+                name="Email"
                 value={formData.email}
                 onChange={(e) => {
                   setFormData((data) => ({ ...data, email: e.target.value }));
@@ -124,6 +160,7 @@ const page = () => {
                 className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="exampleFormControlTextarea1"
                 rows={3}
+                name="Message"
                 placeholder="Your message"
                 value={formData.message}
                 onChange={(e) => {
