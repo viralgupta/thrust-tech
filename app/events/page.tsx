@@ -17,15 +17,17 @@ const page = () => {
       if (sectionJsonPath) {
         const sectionJsonContent = fs.readFileSync(sectionJsonPath, "utf-8");
         const sectionData: Section = JSON.parse(sectionJsonContent);
-        const photoDir = getDirs(dir).find((d) => d.endsWith("photos"));
-        if (sectionData.onEventPage && sectionData.hasPhotos && photoDir) {
+        const photoDir = getDirs(dir).find((d) => d.endsWith("resources"));
+        if (sectionData.onEventPage &&  photoDir && sectionData.hasPhotosorVideos) {
           const photoArray = getFiles(photoDir);
           let newPhotoArray: string[] = [];
           photoArray.forEach((photo) => {
             newPhotoArray.push(photo.substring(6));
           });
-          sectionData.photoArray = newPhotoArray;
-          data.push(sectionData);
+          if(newPhotoArray.length > 0){
+            sectionData.photoArray = newPhotoArray;
+            data.push(sectionData);
+          }
         }
       }
     });

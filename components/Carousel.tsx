@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import VideoPlayer from "./VideoPlayer";
 
 interface props {
   photoArray: string[];
@@ -13,7 +14,6 @@ const Carousel = ({ photoArray }: props) => {
     const nextButton = document.querySelector("[data-carousel-next]");
     prevButton?.removeAttribute("disabled");
     nextButton?.removeAttribute("disabled");
-    
 
     let activeIndex = 0;
 
@@ -43,35 +43,37 @@ const Carousel = ({ photoArray }: props) => {
     >
       <div className="relative overflow-hidden rounded-lg h-full">
         <div className="duration-700 ease-in-out" data-carousel-item="active">
-          <img
-            src={photoArray[0]}
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
+            {!photoArray[0].endsWith("mp4") && <img
+              src={photoArray[0]}
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />}
+            {photoArray[0].endsWith("mp4") && <VideoPlayer key={0} location={photoArray[0]}/>}
+          </div>
         {photoArray.map((photo, index) => {
-          if (index !== 0) {
-            return (
-              <div
-                className="hidden duration-700 ease-in-out"
-                data-carousel-item
-                key={index}
-              >
-                <img
-                  src={photo}
-                  className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                  alt="..."
-                />
-              </div>
-            );
-          } else {
-            return null; // Skip the first element
-          }
-        })}
+            if (index !== 0) {
+              return (
+                <div
+                  className="hidden duration-700 ease-in-out"
+                  data-carousel-item
+                  key={index}
+                >
+                  {!photo.endsWith("mp4") && <img
+                    src={photo}
+                    className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="..."
+                  />}
+                  {photo.endsWith("mp4") && <VideoPlayer location={photo}/>}
+                </div>
+              );
+            } else {
+              return null; // Skip the first element
+            }
+          })}
       </div>
       <button
         type="button"
-        className="absolute top-0 left-0 z-[2] flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none disabled:hidden"
+        className="absolute top-1/2 -translate-y-1/2 left-0 z-[2] flex items-center justify-center px-4 cursor-pointer group focus:outline-none disabled:hidden"
         data-carousel-prev
         disabled={true}
       >
@@ -96,7 +98,7 @@ const Carousel = ({ photoArray }: props) => {
       </button>
       <button
         type="button"
-        className="absolute top-0 right-0 z-[2] flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none disabled:hidden"
+        className="absolute top-1/2 -translate-y-1/2 right-0 z-[2] flex items-center justify-center px-4 cursor-pointer group focus:outline-none disabled:hidden"
         data-carousel-next
         disabled={true}
       >

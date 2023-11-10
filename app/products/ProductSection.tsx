@@ -10,7 +10,7 @@ interface props {
   content2?: string;
   button?: string;
   hasModel: boolean;
-  hasPhotos: boolean;
+  hasPhotosorVideos: boolean;
   modelLocation?: string;
   zoomLevel?: number;
   reverse: boolean;
@@ -18,12 +18,12 @@ interface props {
 }
 
 
-const ProductSection = ({ id, heading, content, heading2, content2, button, hasModel, hasPhotos, modelLocation, zoomLevel, reverse, photoArray }: props) => {
+const ProductSection = ({ id, heading, content, heading2, content2, button, hasModel, hasPhotosorVideos, modelLocation, zoomLevel, reverse, photoArray}: props) => {
   return (
     <>
       <div id={id} className={`h-full w-full lg:flex rounded-lg ${reverse ? "flex-row-reverse" : "flex-row"}`}>
         {hasModel && <Model zoomLevel={zoomLevel} modelLocation={modelLocation}/>}
-        {!hasModel && hasPhotos && <Carousel photoArray={photoArray}/>}
+        {!hasModel && hasPhotosorVideos && <Carousel photoArray={photoArray}/>}
         <Content heading={heading} content={content} heading2={heading2} content2={content2} button={button}/>
       </div>
     </>

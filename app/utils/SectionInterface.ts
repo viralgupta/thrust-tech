@@ -8,7 +8,7 @@ export default interface Section {
     hasModel: boolean;
     modelName?: string;
     zoomLevel?: number;
-    hasPhotos: boolean;
+    hasPhotosorVideos: boolean;
     onHomePage: boolean;
     homeButton?: string;
     homeType?: string;

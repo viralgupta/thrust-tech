@@ -16,11 +16,14 @@ export default function Home() {
       if (sectionJsonPath) {
         const sectionJsonContent = fs.readFileSync(sectionJsonPath, "utf-8");
         const sectionData:Section = JSON.parse(sectionJsonContent);
-        const photoDir = getDirs(dir).find((d) => d.endsWith("photos"))
-        if(sectionData.onHomePage && sectionData.hasPhotos && photoDir){
+        const photoDir = getDirs(dir).find((d) => d.endsWith("resources"))
+        if(sectionData.onHomePage && sectionData.hasPhotosorVideos && photoDir){
           const photoArray = getFiles(photoDir)
-          sectionData.photoArray = photoArray;
-          data.push(sectionData)
+          const pictureArray = photoArray.filter((f)=> !f.endsWith(".mp4") && !f.endsWith("webm"));
+          if(pictureArray.length > 0){
+            sectionData.photoArray = pictureArray;
+            data.push(sectionData)
+          }
         }
       }
     });

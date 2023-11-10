@@ -8,11 +8,19 @@
 //     "hasModel": "boolean",                // true if the section have a model, used in product section
 //     "modelName": "string",                // model name if the hasModel is true, used in product section, can be undefined
 //     "zoomLevel": "number",                // zoom level of model, can be undefined
-//     "hasPhotos": "boolean",               // need to be true so that section shows in home page and event page, {hasModel to be false and this be true for the section to be shown in product page}
-//     "onHomePage": "boolean",              // should this section be on home page {requires hasPhoto to be true, have a folder name photos in main folder}
+//     "hasPhotosorVideos": "boolean",       // need to be true so that section shows in home page or event page or product page, {hasModel to be false and this be true for the section to be shown in product page}
+//     "onHomePage": "boolean",              // should this section be on home page {requires hasPhotosorVideos to be true, have a folder name resources in main folder && atleast one photo in the resource folder}
 //     "homeRedirectPage": "string",         // page to redirect to from home page button {undefined, "contactus", "aboutus","products", "events"} {products, events requires the section to be on product or event page}
 //     "homeButton": "string",               // text on redirect button on home page section {requires section to be on home page}
 //     "homeType": "string",                 // text on heading on home page, which tells what is the section about (eg: product launch, new event, etc.) can be undefined
-//     "onProductPage": "boolean",           // should the section be on product page, {requires hasModel to be true, and modelName which should match a file with {modelName}.glb in main folder} or {requires hasPhotos to be true, photos folder in the main folder}
-//     "onEventPage": "boolean"              // should the section be on event page, {requires hasPhotos to be true, photos folder in the main folder}
+//     "onProductPage": "boolean",           // should the section be on product page, {requires hasModel to be true, and modelName which should match a file with {modelName}.glb in main folder} or {requires hasPhotosorVideos to be true, resources folder in the main folder and minimum one photo or video in the folder}
+//     "onEventPage": "boolean"              // should the section be on event page, {requires hasPhotosorVideos to be true, resources folder in the main folder and minimum one photo or video in the folder}
 // }
+
+
+
+
+
+
+
+// note: only mp4 formats are supported for videos, adding videos in other format might break the section

@@ -24,8 +24,8 @@ const page = () => {
               data.push(sectionData)
             }
           }
-          else if(sectionData.hasPhotos && !sectionData.hasModel){
-            const photoDir = getDirs(dir).find((d) => d.endsWith("photos"))
+          else if(sectionData.hasPhotosorVideos && !sectionData.hasModel){
+            const photoDir = getDirs(dir).find((d) => d.endsWith("resources"))
             if(photoDir){
               const photoArray = getFiles(photoDir)
               let newPhotoArray: string[] = []
@@ -33,7 +33,10 @@ const page = () => {
                 newPhotoArray.push(photo.substring(6))
               });
               sectionData.photoArray = newPhotoArray;
-              data.push(sectionData)
+              if(newPhotoArray.length > 0){
+                sectionData.photoArray = newPhotoArray;
+                data.push(sectionData);
+              }
             }
           }
         }
@@ -46,7 +49,7 @@ const page = () => {
     <div className='w-full h-full bg-gray-900'>
         <div className="h-[100px]"></div>
         {getData(getDirs("public/data")).map((section, index) => {
-          return <ProductSection key={index} hasPhotos={section.hasPhotos} photoArray={section.photoArray} id={section.id} heading={section.heading} content={section.content} heading2={section.heading2} content2={section.content2} button={section.button} hasModel={section.hasModel} modelLocation={section.modelLocation} zoomLevel={section.zoomLevel} reverse={index % 2 == 0 ? true : false}/>
+          return <ProductSection key={index} hasPhotosorVideos={section.hasPhotosorVideos} photoArray={section.photoArray}  id={section.id} heading={section.heading} content={section.content} heading2={section.heading2} content2={section.content2} button={section.button} hasModel={section.hasModel} modelLocation={section.modelLocation} zoomLevel={section.zoomLevel} reverse={index % 2 == 0 ? true : false}/>
         })}
     </div>
     </>
