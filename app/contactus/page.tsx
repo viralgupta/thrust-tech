@@ -98,6 +98,7 @@ const page = () => {
 
   function handleImageLoad() {
     document.getElementById('parentDiv')!.style.display = 'block';
+    console.log("running")
     // document.querySelector('#parentDiv a')!.style.display = 'inline-block';
   }
 
@@ -203,17 +204,17 @@ const page = () => {
             href="https://www.google.com/maps/place/Thrust+Tech/@28.6775365,77.3611831,10.32z/data=!4m6!3m5!1s0x390cf18883097b0f:0x14d61ddbe213e804!8m2!3d28.6689899!4d77.4502252!16s%2Fg%2F11ss3clxpg?entry=ttu"
             target="_blank"
             rel="noopener"
-            className="absolute bottom-0 right-0 m-2 z-10 p-1 bg-red-700 text-xs text-white w-min rounded-sm h-min align-bottom hover:bg-gray-900 duration-300 mt-1 ml-auto lowercase cursor-pointer"
-            style={{display: "none"}}
+            className="absolute bottom-0 right-0 m-2 z-10 p-1 bg-red-700 text-xs text-white w-min rounded-sm h-min align-bottom hover:bg-gray-900 duration-300 mt-1 ml-auto cursor-pointer"
+            // style={{display: "none"}}
           >
-            View In Maps
+            View&nbsp;In&nbsp;Maps
           </a>
           <img
             src="/img/maps.png"
             alt="maps"
             className="rounded-lg opacity-90 hover:opacity-100 duration-500"
             onLoad={handleImageLoad}
-            style={{display: "none"}}
+            // style={{display: "none"}}
           />
         </div>
       </section>
