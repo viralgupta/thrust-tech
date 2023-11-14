@@ -1,0 +1,18 @@
+{
+    "id": "modelsep2023",
+    "homeRedirectPage": "products",
+    "heading": "My Model",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod doloribus tempora eius illo est laboriosam, culpa aut perferendis eos. Consectetur corrupti, doloremque odio placeat dolore porro aliquam maiores aliquid facilis pariatur saepe eum aspernatur explicabo non iure modi doloribus quasi ducimus expedita! Voluptates nobis, maxime cum inventore eaque et deleniti sequi quas laudantium architecto neque molestiae doloribus, totam esse ipsum at dicta id dolor iusto suscipit blanditiis quis, voluptate velit ducimus! A facere unde natus eligendi mollitia! Fugiat aperiam ratione tempore soluta quam iusto molestiae. Suscipit eos dolor adipisci quae ullam vitae ut, molestias ipsa odit beatae, eaque nihil nulla?",
+    "heading2": "About Me",
+    "content2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod doloribus tempora eius illo est laboriosam, culpa aut perferendis eos. Consectetur corrupti, doloremque odio placeat dolore porro aliquam maiores aliquid facilis pariatur saepe eum aspernatur explicabo non iure modi doloribus quasi ducimus expedita! Voluptates nobis, maxime cum inventore eaque et deleniti sequi quas laudantium architecto neque molestiae doloribus, totam esse ipsum at dicta id dolor iusto suscipit blanditiis quis, voluptate velit ducimus! A facere unde natus eligendi mollitia! Fugiat aperiam ratione tempore soluta quam iusto molestiae. Suscipit eos dolor adipisci quae ullam vitae ut, molestias ipsa odit beatae, eaque nihil nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod doloribus tempora eius illo est laboriosam, culpa aut perferendis eos. Consectetur corrupti, doloremque odio placeat dolore porro aliquam maiores aliquid facilis pariatur saepe eum aspernatur explicabo non iure modi doloribus quasi ducimus expedita! Voluptates nobis, maxime cum inventore eaque et deleniti sequi quas laudantium architecto neque molestiae doloribus, totam esse ipsum at dicta id dolor iusto suscipit blanditiis quis, voluptate velit ducimus! A facere unde natus eligendi mollitia! Fugiat aperiam ratione tempore soluta quam iusto molestiae. Suscipit eos dolor adipisci quae ullam vitae ut, molestias ipsa odit beatae, eaque nihil nulla?",
+    "button": "Contact Me",
+    "hasModel": false,
+    "modelName": "me",
+    "zoomLevel": 80,
+    "hasPhotosorVideos": true,
+    "onHomePage": true,
+    "homeButton": "Contact Me",
+    "homeType": "product launch",
+    "onProductPage": true,
+    "onEventPage": true
+}
