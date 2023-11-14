@@ -98,7 +98,7 @@ const page = () => {
 
   function handleImageLoad() {
     // document.getElementById('parentDiv')!.style.display = 'block';
-    document.getElementById("maps-button")!.style.display = 'absolute';
+    let a = document.getElementById("maps-button")!.style.display = 'absolute';
   }
 
   return (
@@ -205,7 +205,7 @@ const page = () => {
             target="_blank"
             rel="noopener"
             className="absolute bottom-0 right-0 m-2 z-10 p-1 bg-red-700 text-xs text-white w-min rounded-sm h-min align-bottom hover:bg-gray-900 duration-300 mt-1 ml-auto cursor-pointer"
-            style={{display: "none"}}
+            // style={{display: "none"}}
           >
             View&nbsp;In&nbsp;Maps
           </a>
