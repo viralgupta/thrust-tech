@@ -98,7 +98,6 @@ const page = () => {
 
   function handleImageLoad() {
     document.getElementById('parentDiv')!.style.display = 'block';
-    console.log("running")
     // document.querySelector('#parentDiv a')!.style.display = 'inline-block';
   }
 
