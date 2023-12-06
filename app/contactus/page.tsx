@@ -17,7 +17,7 @@ const page = () => {
   const [submitting, setSubmitting] = useState(false);
 
   const formSchema = z.object({
-    name: z.string().min(1, "Name field can not empty"),
+    name: z.string().min(1, "Name field can not be empty!"),
     number: z
       .string()
       .optional()
@@ -105,7 +105,7 @@ const page = () => {
     <>
       <section
         id="section-a"
-        className="p-2 md:p-10 flex justify-center align-middle items-center pt-10"
+        className="p-5 md:py-10 md:px-5 flex md:flex-row flex-col justify-center align-middle items-center pt-10"
         style={{ backgroundImage: `url(/img/section-f.webp)` }}
       >
         <Toaster
@@ -114,7 +114,7 @@ const page = () => {
           closeButton
           duration={1000}
         />
-        <div className="relative mx-auto md:mx-0 md:translate-x-12 md:w-1/2 w-full text-center z-[1] md:px-12 block rounded-lg px-6 py-12 bg-[hsla(0,0%,100%,0.55)] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.5)] dark:shadow-black/20 ">
+        <div className="relative mx-auto md:mx-0 md:min-w-[50%] lg:min-w-min md:translate-x-5 md:w-1/2 w-full text-center z-[1] md:px-12 block rounded-lg px-6 py-12 bg-[hsla(0,0%,100%,0.55)] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.5)] dark:shadow-black/20 ">
           <h2 className="mb-12 text-xl md:text-3xl underline-offset-8 underline font-bold">
             Contact&nbsp;us
           </h2>
@@ -198,7 +198,7 @@ const page = () => {
             </button>
           </form>
         </div>
-        <div id="parentDiv" className="relative hidden md:block text-end">
+        <div id="parentDiv" className="relative hidden md:block text-end -translate-x-5">
           <a
             id="maps-button"
             href="https://www.google.com/maps/place/Thrust+Tech/@28.6775365,77.3611831,10.32z/data=!4m6!3m5!1s0x390cf18883097b0f:0x14d61ddbe213e804!8m2!3d28.6689899!4d77.4502252!16s%2Fg%2F11ss3clxpg?entry=ttu"
