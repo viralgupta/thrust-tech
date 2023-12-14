@@ -47,13 +47,23 @@ const page = () => {
       formData.append("Email", validation.data.email);
       formData.append("Message", validation.data.message);
       const promise = fetch(
-        "https://script.google.com/macros/s/AKfycbwWLoGo0h8g7qkW-X-TUhRzbs373smL5pW6PFv3F83qt1d2L4YTH6YEWHZ_ZQjUrj8B6A/exec",
+        "https://script.google.com/macros/s/AKfycby0i9C5cn5sC44sPuKwb_DAHLj_1CDbF5hShu3HGA005Ehx4dzE8GAuO2qHZTPRLm4/exec",
         {
           method: "POST",
           body: formData,
         }
       )
         .then((response) => response.json())
+        .catch((err)=>{
+            setFormData({
+              name: "",
+              number: "",
+              email: "",
+              message: "",
+            });
+            setSubmitting(false);
+            throw "error";
+        })
         .then((res) => {
           if (res.result == "success") {
             setFormData({
@@ -62,14 +72,6 @@ const page = () => {
               email: "",
               message: "",
             });
-          } else {
-            setFormData({
-              name: "",
-              number: "",
-              email: "",
-              message: "",
-            });
-            throw "error";
           }
           setSubmitting(false);
         });
@@ -97,7 +99,6 @@ const page = () => {
   };
 
   function handleImageLoad() {
-    // document.getElementById('parentDiv')!.style.display = 'block';
     let a = document.getElementById("maps-button")!.style.display = 'absolute';
   }
 
@@ -126,6 +127,7 @@ const page = () => {
                 id="exampleInput90"
                 placeholder="Name"
                 name="Name"
+                disabled={submitting}
                 value={formData.name}
                 onChange={(e) => {
                   setFormData((data) => ({ ...data, name: e.target.value }));
@@ -142,6 +144,7 @@ const page = () => {
                 id="exampleInput90"
                 name="Number"
                 placeholder="Phone Number"
+                disabled={submitting}
                 value={formData.number}
                 onChange={(e) => {
                   setFormData((data) => ({ ...data, number: e.target.value }));
@@ -158,6 +161,7 @@ const page = () => {
                 id="exampleInput91"
                 placeholder="Email"
                 name="Email"
+                disabled={submitting}
                 value={formData.email}
                 onChange={(e) => {
                   setFormData((data) => ({ ...data, email: e.target.value }));
@@ -174,6 +178,7 @@ const page = () => {
                 rows={3}
                 name="Message"
                 placeholder="Your message"
+                disabled={submitting}
                 value={formData.message}
                 onChange={(e) => {
                   setFormData((data) => ({ ...data, message: e.target.value }));
