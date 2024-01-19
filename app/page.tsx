@@ -44,7 +44,7 @@ export default function Home() {
         reverse={index%2==0 ? true: false}
       />
       })} */}
-      <div className="bg-black w-max h-full flex justify-center items-center align-middle font-mono text-base md:text-xl text-center xl:text-3xl about p-5">
+      <div className="bg-black w-screen h-screen flex justify-center items-center align-middle font-mono text-base md:text-xl text-center xl:text-3xl about p-10">
         SITE IS UNDER MAINTENANCE. PLEASE CHECK BACK LATER.
       </div>
     </>
