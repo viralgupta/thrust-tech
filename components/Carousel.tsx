@@ -38,7 +38,7 @@ const Carousel = ({ photoArray }: props) => {
   return (
     <div
       id="controls-carousel"
-      className="relative w-full lg:w-1/2 h-[50vh] lg:h-screen p-2 rounded-lg bg-black"
+      className="relative w-full lg:w-1/2 h-[50vh] lg:h-screen p-2 rounded-lg bg-gradient-radial"
       data-carousel="slide"
     >
       <div className="relative overflow-hidden rounded-lg h-full">
