@@ -10,7 +10,7 @@
     "zoomLevel": 84,
     "hasPhotosorVideos": true,
     "onHomePage": true,
-    "homeRedirectPage": "product",
+    "homeRedirectPage": "products",
     "homeButton": "Know More",
     "homeType": "Flagship",
     "onProductPage": true,
