@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <>
-      {/* {getData(getDirs("public/data")).map((section, index) => {
+      {getData(getDirs("public/data")).map((section, index) => {
         return <MainSection
         key={index}
         type={section.homeType}
@@ -43,10 +43,7 @@ export default function Home() {
         page={section.homeRedirectPage}
         reverse={index%2==0 ? true: false}
       />
-      })} */}
-      <div className="bg-black w-screen h-screen flex justify-center items-center align-middle font-mono text-base md:text-xl text-center xl:text-3xl about p-10">
-        SITE IS UNDER MAINTENANCE. PLEASE CHECK BACK LATER.
-      </div>
+      })}
     </>
   );
 }

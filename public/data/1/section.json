@@ -11,8 +11,8 @@
     "zoomLevel": 80,
     "hasPhotosorVideos": true,
     "onHomePage": true,
-    "homeButton": "Contact Me",
+    "homeButton": "View Model",
     "homeType": "product launch",
-    "onProductPage": true,
+    "onProductPage": false,
     "onEventPage": true
 }
