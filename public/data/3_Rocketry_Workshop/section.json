@@ -12,7 +12,7 @@
     "onHomePage": true,
     "homeRedirectPage": "events",
     "homeButton": "Know More",
-    "homeType": "Flagship Workshop",
+    "homeType": "Flagship Event",
     "onProductPage": false,
     "onEventPage": true
 }
