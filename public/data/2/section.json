@@ -1,25 +1,18 @@
- {
-     "id": "testSubhadr",                       
-     "heading": "this is heading",                
-     "content": "content",             
-     "heading2": "h2",            
-     "content2": "c2",               
-     "button": "andar wala button",                   
-     "hasModel": false,                
-     "modelName": "string",                
-     "zoomLevel": 84,               
-     "hasPhotosorVideos": true,       
-     "onHomePage": true,              
-     "homeRedirectPage": "events",         
-     "homeButton": "home wala button",               
-     "homeType": "ye hai home type",                 
-     "onProductPage": false,           
-     "onEventPage": true              
- }
-
-
-
-
-
-
-
+{
+    "id": "testSubhadr",
+    "heading": "this is heading",
+    "content": "content",
+    "heading2": "h2",
+    "content2": "c2",
+    "button": "andar wala button",
+    "hasModel": false,
+    "modelName": "string",
+    "zoomLevel": 84,
+    "hasPhotosorVideos": true,
+    "onHomePage": true,
+    "homeRedirectPage": "events",
+    "homeButton": "home wala button",
+    "homeType": "ye hai home type",
+    "onProductPage": false,
+    "onEventPage": true
+}

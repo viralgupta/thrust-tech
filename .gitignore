@@ -19,7 +19,6 @@
 .DS_Store
 *.pem
 
-/public/data/
 
 # debug
 npm-debug.log*
