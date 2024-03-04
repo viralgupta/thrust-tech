@@ -29,14 +29,9 @@ const page = () => {
             as your trusted partner in the exciting world of model rocketry and
             aerospace!
           </div>
-          <h4 className="text-3xl mb-3 lg:mb-10 font-bold">Founder Note</h4>
+          <h4 className="text-3xl mb-3 lg:mb-10 font-bold"></h4>
           <div className="text-xs md:text-xl mb-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsa
-            dolore cumque nobis id libero, ullam vero culpa adipisci. Facilis
-            voluptas temporibus est amet quam voluptatum esse eius, ex accusamus
-            architecto quis dolorum placeat vero blanditiis. Odio accusamus quo
-            obcaecati minima ullam explicabo quos eos ratione, quibusdam sed.
-            Sequi, fugiat?
+        
           </div>
           <Link href={`/contactus`} className="btn">
             <div className="hover"></div>
